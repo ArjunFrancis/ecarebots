@@ -173,7 +173,8 @@ ecarebots/
 │
 ├── 📊 datasets/              # Open datasets catalog
 │   ├── README.md                        # Dataset usage guidelines
-│   └── open-datasets.md                 # Healthcare, voice, gesture datasets
+│   ├── open-datasets.md                 # Healthcare, voice, gesture datasets (50+)
+│   └── [subdirectories]                 # Data storage structure
 │
 ├── 📄 README.md               # This file - project overview
 ├── 📜 LICENSE                 # MIT License
@@ -184,51 +185,64 @@ ecarebots/
 
 ## **🚀 Start Here for Developers**
 
-### **Quick Links for Different Roles**
+### **Quick Navigation (Pick Your Role)**
 
-**⏱️ 5-minute overview:**  
-👉 **[DEVELOPER_QUICK_START.md](./docs/DEVELOPER_QUICK_START.md)** – Fast onboarding by role
+| Role | Start Here | Then Read | Use |
+|------|-----------|-----------|-----|
+| **AI/Agent Engineer** | [ai-agent-design.md](./architecture/ai-agent-design.md) | [ai-agent-frameworks.md](./research/ai-agent-frameworks.md), [open-datasets.md](./datasets/open-datasets.md) | Intent classification, LangChain agent training |
+| **Backend Engineer** | [database-schema.md](./architecture/database-schema.md) | [api-specification.md](./architecture/api-specification.md), [integration-guide.md](./architecture/integration-guide.md) | PostgreSQL setup, API development, EHR integration |
+| **Frontend/Mobile Dev** | [uiux-design-principles.md](./specifications/uiux-design-principles.md) | [user-flows.md](./specifications/user-flows.md), [accessibility-patterns.md](./research/accessibility-patterns.md) | React/React Native UI, voice/gesture components |
+| **DevOps/Infrastructure** | [tech-stack-justification.md](./architecture/tech-stack-justification.md) | [security-and-privacy.md](./research/security-and-privacy.md) | Deployment, HIPAA compliance, infrastructure |
+| **QA/Testing** | [feature-specifications.md](./specifications/feature-specifications.md) | [risk-and-failure-modes.md](./research/risk-and-failure-modes.md) | Test cases, edge cases, accessibility testing |
 
-**🛠️ Ready to implement:**  
-👉 **[IMPLEMENTATION_HANDOFF.md](./docs/IMPLEMENTATION_HANDOFF.md)** – Complete implementation guide
+### **Complete Documentation Roadmap**
 
-### **Detailed Learning Path**
+**5-min Quick Start:**  
+👉 **[DEVELOPER_QUICK_START.md](./docs/DEVELOPER_QUICK_START.md)**
 
-#### **1. Understand the Project Vision**
-- **Read:** [README.md](./README.md) (you are here)
-- **Watch:** [Project Demo Video](https://ecarebots.com/demo) (coming soon)
+**30-min Deep Dive:**  
+👉 **[IMPLEMENTATION_HANDOFF.md](./docs/IMPLEMENTATION_HANDOFF.md)**
 
-#### **2. Review System Architecture**
-- **Read:** [architecture/system-architecture.md](./architecture/system-architecture.md) – High-level design
-- **Read:** [architecture/ai-agent-design.md](./architecture/ai-agent-design.md) – Agent roles and workflows
-- **Read:** [architecture/multimodal-pipeline.md](./architecture/multimodal-pipeline.md) – Voice/gesture/vision processing
+**Detailed Learning Path (By Phase):**
 
-#### **3. Understand Data Models**
-- **Read:** [architecture/database-schema.md](./architecture/database-schema.md) – PostgreSQL ERD, tables, relationships
-- **Read:** [architecture/api-specification.md](./architecture/api-specification.md) – RESTful API endpoints
+#### **Phase 0: Understand the Big Picture**
+- [README.md](./README.md) ← You are here
+- [system-architecture.md](./architecture/system-architecture.md) – High-level design
+- [DEVELOPER_QUICK_START.md](./docs/DEVELOPER_QUICK_START.md) – 5-minute overview
 
-#### **4. Learn Feature Requirements**
-- **Read:** [specifications/feature-specifications.md](./specifications/feature-specifications.md) – Detailed feature requirements with acceptance criteria
-- **Read:** [specifications/user-flows.md](./specifications/user-flows.md) – User journey diagrams
-- **Read:** [specifications/uiux-design-principles.md](./specifications/uiux-design-principles.md) – Accessibility guidelines
+#### **Phase 1: Learn the Components**
 
-#### **5. Understand Integrations**
-- **Read:** [research/integration-landscape.md](./research/integration-landscape.md) – EHR, insurance, pharmacy APIs
-- **Read:** [research/healthcare-standards.md](./research/healthcare-standards.md) – FHIR, HL7, HIPAA
+**Data Layer:**
+- [database-schema.md](./architecture/database-schema.md) – All tables, relationships, FHIR compliance
+- [datasets/README.md](./datasets/README.md) – Training data, synthetic EHR setup
+- [datasets/open-datasets.md](./datasets/open-datasets.md) – 50+ curated public datasets
 
-#### **6. Security & Compliance**
-- **Read:** [research/security-and-privacy.md](./research/security-and-privacy.md) – Auth, encryption, PHI handling
-- **Read:** [research/risk-and-failure-modes.md](./research/risk-and-failure-modes.md) – Safety analysis, mitigation
+**AI/Agent Layer:**
+- [ai-agent-design.md](./architecture/ai-agent-design.md) – Agent roles, workflows, tool-use
+- [multimodal-pipeline.md](./architecture/multimodal-pipeline.md) – Voice/gesture/vision processing
+- [ai-agent-frameworks.md](./research/ai-agent-frameworks.md) – LangChain, LlamaIndex, RAG patterns
 
-#### **7. AI & ML Context**
-- **Read:** [research/ai-agent-frameworks.md](./research/ai-agent-frameworks.md) – LangChain, LlamaIndex, RAG
-- **Read:** [datasets/open-datasets.md](./datasets/open-datasets.md) – Training data sources
-- **Read:** [research/multimodal-frameworks.md](./research/multimodal-frameworks.md) – Voice, gesture, vision AI
+**API Layer:**
+- [api-specification.md](./architecture/api-specification.md) – OpenAPI spec, all 40+ endpoints
+- [api-quick-reference.md](./architecture/api-quick-reference.md) – Fast lookup, code examples
 
-#### **8. Implementation Roadmap**
-- **Read:** [architecture/tech-stack-justification.md](./architecture/tech-stack-justification.md) – Technology choices
-- **Read:** [docs/IMPLEMENTATION_HANDOFF.md](./docs/IMPLEMENTATION_HANDOFF.md) – Phased implementation plan
-- **Track:** GitHub Issues (coming soon) for task assignments
+**UI/UX Layer:**
+- [uiux-design-principles.md](./specifications/uiux-design-principles.md) – Accessibility, design system
+- [user-flows.md](./specifications/user-flows.md) – User journeys, interaction patterns
+
+#### **Phase 2: Understand Cross-Cutting Concerns**
+
+- [healthcare-standards.md](./research/healthcare-standards.md) – FHIR, HL7, CCD, CCDA
+- [security-and-privacy.md](./research/security-and-privacy.md) – HIPAA, encryption, auth
+- [integration-landscape.md](./research/integration-landscape.md) – EHR/insurance/pharmacy APIs
+- [accessibility-patterns.md](./research/accessibility-patterns.md) – WCAG 2.1 AAA compliance
+- [risk-and-failure-modes.md](./research/risk-and-failure-modes.md) – Safety analysis, mitigation
+
+#### **Phase 3: Implement**
+
+- [IMPLEMENTATION_HANDOFF.md](./docs/IMPLEMENTATION_HANDOFF.md) – Phase-by-phase roadmap
+- [feature-specifications.md](./specifications/feature-specifications.md) – Acceptance criteria
+- [tech-stack-justification.md](./architecture/tech-stack-justification.md) – Tech choices rationale
 
 ---
 
@@ -338,7 +352,7 @@ ecarebots/
 - Feature requirements documented with acceptance criteria
 - User flows mapped
 - UI/UX design principles established
-- Datasets cataloged
+- Datasets cataloged (50+ open sources)
 
 ✅ **Implementation Guidance (Complete)**
 - [DEVELOPER_QUICK_START.md](./docs/DEVELOPER_QUICK_START.md) – 5-minute onboarding
@@ -494,7 +508,7 @@ This project is licensed under the **MIT License** – see [LICENSE](./LICENSE) 
 
 **Made with ❤️ by the EcareBots Team**
 
-[Website](https://ecarebots.com) • [Quick Start](./docs/DEVELOPER_QUICK_START.md) • [Implementation](./docs/IMPLEMENTATION_HANDOFF.md) • [Contact](mailto:arjunfrancis21@gmail.com)
+[Website](https://ecarebots.com) • [Quick Start](./docs/DEVELOPER_QUICK_START.md) • [Implementation](./docs/IMPLEMENTATION_HANDOFF.md) • [Datasets](./datasets/open-datasets.md) • [Contact](mailto:arjunfrancis21@gmail.com)
 
 © 2025 EcareBots. All rights reserved.
 
