@@ -36,7 +36,7 @@ Current healthcare AI platforms treat emotions as:
 Based on extensive research of 50+ healthcare AI platforms (February 2026):
 
 | Platform Type | What They Do | What They DON'T Do |
-|--------------|--------------|-------------------|
+|--------------|--------------|---------------------|
 | **Voice-first healthcare apps** | Book appointments, answer FAQs | Track emotional patterns, adapt communication style |
 | **Elderly care platforms** | Medication reminders, fall detection | Predict emotional isolation, caregiver burnout detection |
 | **Telehealth AI** | Symptom checking, triage | Emotional longitudinal analysis, family coordination |
@@ -70,34 +70,34 @@ Based on extensive research of 50+ healthcare AI platforms (February 2026):
 ```
 ┌─────────────────────────────────────────────────────────┐
 │           Emotional Context AI Engine (ECAE)           │
-└────────────────────┬────────────────────────────────────┘
-                     │
-        ┌────────────┴─────────────┐
-        │                         │
-┌───────▼────────┐      ┌────────▼─────────┐
-│  Patient Side  │      │ Caregiver Side  │
+└────────────────────────┬────────────────────────────────┘
+                         │
+        ┌────────────────┴────────────────┐
+        │                                 │
+┌───────▼────────┐      ┌────────▼────────┐
+│  Patient Side  │◄────►│ Caregiver Side  │
 │   Monitoring   │      │   Monitoring    │
 └───────┬────────┘      └────────┬─────────┘
         │                         │
-        └────────────┬─────────────┘
+        └────────────┬────────────┘
                      │
-        ┌────────────▼─────────────┐
+        ┌────────────▼────────────┐
         │  5 Sub-Engines          │
-        ├──────────────────────────┤
+        ├─────────────────────────┤
         │ 1. Voice Emotion        │
         │ 2. Behavioral Pattern   │
         │ 3. Communication Style  │
         │ 4. Social Connection    │
         │ 5. Predictive Alert     │
-        └────────────┬─────────────┘
+        └────────────┬────────────┘
                      │
-        ┌────────────▼─────────────┐
+        ┌────────────▼────────────┐
         │   Adaptive Response     │
         │   - Tone adjustment     │
         │   - Pace modification   │
         │   - Content selection   │
         │   - Intervention timing │
-        └──────────────────────────┘
+        └─────────────────────────┘
 ```
 
 ### 1. Voice Emotion Analysis Engine
